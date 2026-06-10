@@ -53,3 +53,36 @@ test('DELETE user', async ({ request }) => {
 
   expect(response.status()).toBe(200);
 });
+
+
+// VERIFY PAGE TITLE IN WEBPAGE
+
+/*
+import { test, expect } from '@playwright/test';
+
+test('Verify page title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  await expect(page).toHaveTitle(/Playwright/);
+});
+*/
+
+
+
+// VERIFY LOGIN FORM FROM WEBPAGE
+
+
+import { test, expect } from '@playwright/test';
+
+test('Login test', async ({ page }) => {
+  await page.goto('https://practicetestautomation.com/practice-test-login/');
+
+  await page.fill('#username', 'student');
+  await page.fill('#password', 'Password123');
+
+  await page.click('#submit');
+
+  await expect(page.locator('h1')).toHaveText('Logged In Successfully');
+});
+
+
