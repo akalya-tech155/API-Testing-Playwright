@@ -53,3 +53,17 @@ test('DELETE user', async ({ request }) => {
 
   expect(response.status()).toBe(200);
 });
+
+
+// VERIFY PAGE TITLE IN WEBPAGE
+
+/*
+import { test, expect } from '@playwright/test';
+
+test('Verify page title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  await expect(page).toHaveTitle(/Playwright/);
+});
+*/
+
